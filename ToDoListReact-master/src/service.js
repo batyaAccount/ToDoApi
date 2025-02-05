@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const apiUrl = "http://localhost:5076"
+// debugger
 axios.defaults.baseURL = process.env.REACT_APP_API_KEY;
 
 axios.interceptors.response.use(
@@ -14,7 +15,6 @@ axios.interceptors.response.use(
 export default {
   getTasks: async () => {
     try {
-
       const result = await axios.get(`/items`)
     } catch (e) {
       alert('Error fetching data')
