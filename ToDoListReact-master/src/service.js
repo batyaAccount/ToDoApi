@@ -17,6 +17,8 @@ export default {
     try {
       const result = await axios.get(`/items`)
     } catch (e) {
+      console.log(e);
+      
       alert('Error fetching data')
     }
     return result.data;
