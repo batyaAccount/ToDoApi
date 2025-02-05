@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import service from './service.js';
 
 function App() {
+  require('dotenv').config()
+
   const [newTodo, setNewTodo] = useState("");
   const [todos, setTodos] = useState([]);
 
