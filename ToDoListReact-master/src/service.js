@@ -13,7 +13,12 @@ axios.interceptors.response.use(
 
 export default {
   getTasks: async () => {
-    const result = await axios.get(`/items`)
+    try {
+
+      const result = await axios.get(`/items`)
+    } catch (e) {
+      alert('Error fetching data')
+    }
     return result.data;
   },
 
