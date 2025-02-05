@@ -34,6 +34,7 @@ app.MapGet("/items", async (ToDoDbContext dbContext) =>
     var results = await dbContext.Items.ToListAsync();
     return Results.Ok(results);
 });
+app.MapGet("/",  () => "AthServer is running!");
 app.MapPost("/items", async (Item item, ToDoDbContext dbContext) =>
 {
     if (item == null)
