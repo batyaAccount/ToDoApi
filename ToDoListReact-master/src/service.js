@@ -14,13 +14,16 @@ axios.interceptors.response.use(
 export default {
   getTasks: async () => {
     try {
+      console.log(process.env.REACT_APP_API_KEY+'/items');
+      
       const result = await axios.get(`/items`)
+      return result.data;
+
     } catch (e) {
       console.log(e);
       
       alert('Error fetching data')
     }
-    return result.data;
   },
 
   addTask: async (name) => {
