@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const RENDER_API_URL = "https://todoapi-mllp.onrender.com/items";
+const RENDER_API_URL = "https://api.render.com/v1/services";
 const API_KEY = 'rnd_hyTvXdm4ml2CnTrAo9aN20niPEVn';
 
 app.get("/", async (req, res) => {
