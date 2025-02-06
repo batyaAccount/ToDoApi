@@ -244,3 +244,6 @@ C:\Users\user1\Desktop\Batya\ToDoApiAll\TodoApi\obj\Debug\net9.0\refint\TodoApi.
 C:\Users\user1\Desktop\Batya\ToDoApiAll\TodoApi\obj\Debug\net9.0\TodoApi.pdb
 C:\Users\user1\Desktop\Batya\ToDoApiAll\TodoApi\obj\Debug\net9.0\TodoApi.genruntimeconfig.cache
 C:\Users\user1\Desktop\Batya\ToDoApiAll\TodoApi\obj\Debug\net9.0\ref\TodoApi.dll
+C:\Users\user1\Desktop\Batya\ToDoApiAll\TodoApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user1\Desktop\Batya\ToDoApiAll\TodoApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user1\Desktop\Batya\ToDoApiAll\TodoApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll

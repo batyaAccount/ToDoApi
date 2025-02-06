@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using TodoApi;
 
-
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddOpenApi();
 
 builder.Services.AddCors(options =>
@@ -17,17 +17,26 @@ builder.Services.AddCors(options =>
 });
 builder.Services.AddDbContext<ToDoDbContext>();
 builder.Services.AddControllers();
+//swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
+  app.UseSwaggerUI(options => 
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+        options.RoutePrefix = string.Empty;
+    });
 }
 app.UseCors("AllowAllOrigins");
 
 app.UseAuthorization();
 app.MapControllers();
-
 
 app.MapGet("/items", async (ToDoDbContext dbContext) =>
 {
